@@ -1,0 +1,33 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    width: calc(100% - 30px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #000000;  /* Cor da borda */
+    border-radius: 4px;
+    transition: border-color 0.3s;
+    box-sizing: border-box;  /* Evita que a largura total seja maior que 100% */
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #c92727;  /* Cor da borda ao focar */
+}
+
+.option {
+    margin-bottom: 5px; /* ou outra medida desejada */
+}
+

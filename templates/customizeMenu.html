@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Builder Download</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/sub/sub.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Adicione estilos adicionais conforme necessário para a página específica */
+        #bottomMenu {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        #bottomMenu button {
+            padding: 10px 20px;
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #bottomImage {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #bottomImage img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sideMenu">
+        <!-- Adicione os itens do menu aqui -->
+    </div>
+    <div id="particles-js"></div>
+    <div class="container">
+        <h1>MLZ2 Builder Download</h1>
+        <form id="buildForm">
+            <!-- Adicione seus campos de formulário aqui -->
+        </form>
+        
+        <div id="bottomMenu">
+            <button onclick="redirectToPage('/windows-download')">
+                <i class="fab fa-windows"></i> Windows
+            </button>
+            <button onclick="redirectToPage('/linux-download')">
+                <i class="fab fa-linux"></i> Linux
+            </button>
+        </div>
+
+        <div id="bottomImage">
+            <img src="/images/NC.png" alt="Descrição da imagem">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="/sub/particlesub.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bat-to-exe@1.1.0/dist/bat-to-exe.min.js"></script>
+    <script src="/static/script.js"></script>
+    <script src="/static/functionbuilder.js"></script>
+    <script src="/sub/customizeScript.js"></script>
+
+    <script>
+        function redirectToPage(page) {
+            switch (page) {
+                case '/linux-download':
+                    window.location.href = 'https://github.com/topics/batch-to-exe';
+                    break;
+                case '/windows-download':
+                    window.location.href = 'https://bat-to-exe-converter-x64.en.softonic.com/';
+                    break;
+                default:
+                    window.location.href = page;
+            }
+        }
+    </script>
+</body>
+
+</html>
